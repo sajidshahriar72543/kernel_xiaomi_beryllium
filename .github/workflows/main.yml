@@ -1,0 +1,20 @@
+name: Github workflow kernel build
+
+on:
+  workflow_dispatch:
+
+env:
+    BOT_API_KEY: ${{ secrets.BOT_API_KEY }}
+    CHANNEL_ID: ${{ secrets.CHANNEL_ID }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout kernel source
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 1
+
+    - name: Setup kernel source and build
+      run: bash kernel_setup.sh
