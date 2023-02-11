@@ -17,4 +17,4 @@ jobs:
         fetch-depth: 1
 
     - name: Setup kernel source and build
-      run: bash kernel_setup.sh
+      run: bash build.sh
