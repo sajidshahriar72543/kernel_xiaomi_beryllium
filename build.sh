@@ -165,8 +165,8 @@ clone() {
 	echo " "
 	if [ $COMPILER = "clang" ]
 	then
-		msg "|| Cloning SD-Clang 16 ||"
-		git clone --depth=1 https://gitlab.com/ThankYouMario/android_prebuilts_clang-standalone -b 16 $CLANG_DIR/clang
+		msg "|| Cloning Playground Clang 17 ||"
+		git clone --depth=1 https://gitlab.com/crdroidandroid/android_prebuilts_clang_host_linux-x86_clang-playground -b 17 $CLANG_DIR/clang
 		# Toolchain Directory defaults to clang
 		TC_DIR=$CLANG_DIR/clang
 	fi
